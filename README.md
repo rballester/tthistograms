@@ -1,6 +1,6 @@
 ## TT-histograms: integral histogram compression and look-up in the tensor train format
 
-This is a Python implementation of the method and experiments from the paper "Tensor Decompositions for Integral Histogram Compression and Look-Up" (Rafael Ballester-Ripoll and Renato Pajarola), IEEE Transactions on Visualization and Computer Graphics (to appear).
+This is a Python implementation of the method and experiments from the paper ["Tensor Decompositions for Integral Histogram Compression and Look-Up"](http://ieeexplore.ieee.org/document/8281540/) (Rafael Ballester-Ripoll and Renato Pajarola), IEEE Transactions on Visualization and Computer Graphics, 2018.
 
 ### Motivation
 
@@ -11,7 +11,7 @@ TT-histograms compress integral histograms to make them manageable and offer fas
 ### Features
 
 - Compute TT-histograms, i.e. compressed integral histogram representations out of ND arrays with arbitrary number of bins
-- Query TT-hhistograms in a number of ways:
+- Query TT-histograms in a number of ways:
     - Over box regions
     - Over non-rectangular but separable regions
     - Over non-separable regions
