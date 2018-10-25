@@ -16,14 +16,14 @@ class TTHistogram(object):
         """
         Build (incrementally) a compressed integral histogram that can be later queried
 
-        :param X: an ndarray
+        :param X: an ndarray, *already quantized* with values in 0, ..., B-1
         :param B: number of bins
-        :param eps: relative error
+        :param eps: relative error for the hierarchical sum-and-compress
         """
 
         N = X.ndim
-        assert X.min() >= 0
-        assert X.max() < B
+        if not (X.min() >= 0 and X.max() < B):
+            raise ValueError('Please provide an array that is already quantized')
         start = time.time()
 
         def create_generator():
